@@ -353,6 +353,15 @@ const macosTpl = [
 				role: 'front'
 			},
 			{
+				label: 'Enable Menu Bar Mode',
+				click() {
+					config.set('continuity', true);
+
+					const [win] = BrowserWindow.getAllWindows();
+					win.toggleContinuity();
+				}
+			},
+			{
 				role: 'togglefullscreen'
 			},
 			{
